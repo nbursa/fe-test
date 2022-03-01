@@ -8,16 +8,21 @@ let authorized = authStore.authorized;
 </script>
 
 <template>
-  <nav>
+  <!-- <nav>
     {{authorized}}
     <RouterLink to="/">Login Page</RouterLink>
     <RouterLink :class="authorized ? '' : 'protected'" to="/welcome">Confidental Page</RouterLink>
-  </nav>
+  </nav> -->
 
-  <RouterView />
+  <main>
+    {{authorized}}
+    <RouterView />
+  </main>
+
 </template>
 
 <style lang="scss">
 @import "@/styles/base";
+@import "@/styles/fonts";
 @import "@/styles/colors";
 </style>
